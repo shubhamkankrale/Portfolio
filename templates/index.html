@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Shubham Kankrale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #00d4ff;
+            
+        }
+
+        .logo span {
+            color: #e0e0e0;
+            font-weight: 400;
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+        }
+
+        .hero-text {
+            max-width: 600px;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #c0c0c0;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00d4ff;
+            color: #121212;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .hero-image {
+            animation: fadeInRight 1s ease-in-out;
+        }
+
+        .hero-image img {
+            width: 280px; /* Reduced size */
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid #00d4ff;
+            box-shadow: 0px 10px 20px rgba(0, 212, 255, 0.2);
+            transition: transform 0.3s;
+            margin-right: 30px; /* Moves image slightly inside */
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Education Section */
+        .education {
+            padding: 4rem 2rem;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            text-align: center;
+        }
+
+        .education h2 {
+            font-size: 2.5rem;
+            color: #00d4ff;
+            margin-bottom: 2rem;
+        }
+
+        .education-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 1.5rem;
+            background: #121212;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-item h3 {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        .education-item p {
+            font-size: 1rem;
+            color: #c0c0c0;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            color: #757575;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #1db954;
+        }
+
+        /* Animations */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .AI {
+            display: flex;
+            align-items: center;
+            gap:0px; /* Adds spacing between image and text */
+        }
+
+        .AI img {
+            width: 80px; /* Adjust the image size */
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover; /* Ensures the image stays proportional */
+        }
+
+        .AI #n {
+            font-size: 1rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        marquee{
+            position:fixed;
+        }
+
+
+
+        /* Experience Section */
+.experience {
+    padding: 4rem 2rem;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 2rem;
+}
+
+.experience-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.experience-item {
+    padding: 20px;
+    background: #121212;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 212, 255, 0.2);
+    position: relative;
+    width: 45%;
+    margin-bottom: 40px;
+}
+
+.experience-item.left {
+    left: 0;
+}
+
+.experience-item.right {
+    left: 55%;
+}
+
+.content {
+    padding: 15px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #c0c0c0;
+    margin-top: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #00d4ff;
+}
+
+/* Timeline Line */
+.experience-container::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background: #8A2BE2;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Dots */
+.experience-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 4px solid #8A2BE2;
+}
+
+.experience-item.left::before {
+    right: -10px;
+}
+
+.experience-item.right::before {
+    left: -10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-container::after {
+        left: 20px;
+    }
+
+    .experience-item {
+        width: 100%;
+        left: 0;
+        padding-left: 50px;
+    }
+
+    .experience-item.right {
+        left: 0;
+    }
+
+    .experience-item::before {
+        left: 10px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0d0d0d;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #00d4ff;
+}
+
+.logo span {
+    color: #e0e0e0;
+    font-weight: 400;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #e0e0e0;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* Rest of your existing styles... */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(15, 15, 15, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: 0.3s;
+    }
+
+    nav ul.active {
+        right: 0;
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero-text {
+        margin-top: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+        margin-right: 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo span {
+        font-size: 0.8rem;
+    }
+
+    .education-container {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .education h2, .experience h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Shubham Kankrale
+            <span>Full Stack Developer & AI Engineer</span>
+        </div>
+        <div class="AI">
+            <a href="/samai"><img src="/static/assets/AI2.jpg" alt="SamAI"></a>
+            <a href="/samai" id="n">SamAI</a>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <marquee><strong>Access SamAI For Getting More Information About Shubham Kankrale</strong></marquee>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to My Portfolio!</h1>
+            <p>I'm a passionate developer crafting unique and powerful solutions. Dive into my portfolio to explore more!</p>
+            <div class="btn-container">
+                <a href="/projects" class="btn">View Projects</a>
+                <a href="/static/assets/Shubham_Kankrale.pdf" class="btn" download="Shubham_Kankrale_Resume.pdf">Download Resume</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/static/assets/sam.jpeg" alt="Shubham Kankrale">
+        </div>
+    </section>
+
+
+
+    <section class="experience">
+        <h2>Experience</h2>
+        <div class="experience-container">
+
+            <div class="experience-item left">
+                <div class="content">
+                    <h3>Webfries IT Solutions Pvt. Ltd. - Intern</h3>
+                    <p class="date">June 2024 - July 2024</p>
+                    <strong>Full Stack Developer and Artificial Intelligence Engineer</strong>
+                    <p>Expert in high-performance, real-time problem-solving Full Stack web applications. Integrated AI techniques like RAG, LLMs, and NLP, leveraging tools like GPT, Groq, Claude, and Gemini to enhance functionality.</p>
+                </div>
+            </div>
+    
+            <div class="experience-item right">
+                <div class="content">
+                    <h3>ESDS - Intern</h3>
+                    <p class="date">Feb 2023 - April 2023 (2 months)</p>
+                    <strong>Full Stack Developer</strong>
+                    <p>Specialized in developing real-time web applications and AI models. Integrated advanced AI techniques like LLMs and NLP for enhanced functionality. Skilled in leveraging tools like GPT to deliver robust solutions.</p>
+                </div>
+            </div>
+    
+            
+    
+        </div>
+    </section>
+    
+
+
+
+    <section class="education">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <h3>Bachelor of Engineering - Artificial Intelligence & Data Science</h3>
+                <p>Savitribai Phule Pune University, 2021 - 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>Diploma in Computer Engineering</h3>
+                <p>MSBTE, 2019 - 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shubham Kankrale. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

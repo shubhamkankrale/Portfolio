@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Shubham Kankrale</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00d4ff;
+        }
+
+        .logo span {
+            font-size: 1rem;
+            color: white;
+            display: block;
+            font-weight: 400;
+        }
+
+        .AI {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .AI img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .AI p {
+            font-size: 1rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #00d4ff;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        ul li a:hover {
+            background-color: #00d4ff;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .projects-title {
+            font-size: 28px;
+            font-weight: bold;
+            display: inline-block;
+            background-color: #00d4ff;
+            padding: 5px 15px;
+            color: black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .project-boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 25px rgba(0, 212, 255, 0.5);
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1F1F1F;
+            color: #757575;
+            font-size: 0.9rem;
+        }
+
+        marquee {
+            position: fixed;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding-bottom: 0;
+            }
+
+            ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding: 20px 0;
+                background-color: #1e1e1e;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1000;
+            }
+
+            ul.active {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            ul li {
+                margin: 5px 0;
+                width: 100%;
+            }
+
+            ul li a {
+                display: block;
+                padding: 10px;
+            }
+
+            .project-boxes {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 10px;
+            }
+
+            .AI {
+                margin: 10px 0;
+            }
+
+            .AI img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+            }
+
+            .projects-title {
+                font-size: 24px;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+            .project-card h3 {
+                font-size: 18px;
+            }
+
+            .project-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            Shubham Kankrale
+            <span>Full Stack Developer & AI Engineer</span>
+        </div>
+        <div class="AI">
+            <a href="/samai"><img src="/static/assets/AI2.jpg" alt="SamAI"></a>
+            <a href="/samai" id="n">SamAI</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <marquee>Access SamAI For Getting More Information About Shubham Kankrale</marquee>
+
+    <div class="projects-container">
+        <h2 class="projects-title">Projects</h2>
+
+        <div class="project-boxes">
+            <div class="project-card">
+                <h3>RAG Based AI Connect Hospital</h3>
+                <p>An AI-powered hospital management system Developed by using Python, Django, and Groq API. It enables online OPD appointment booking and includes an AI chatbot with RAG technology for getting hospital information.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>AI Voice Agent Chatbot</h3>
+                <p>Developed an AI Voice Agent Chatbot using HTML, CSS, and JavaScript for the frontend, and Python and Flask for the backend. This chatbot enables seamless voice interactions, supports multiple languages, and provides real-time responses.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>SamHuB - YouTube Media Downloader</h3>
+                <p>A web application for downloading YouTube videos and audio files. Built with Flask, the site allows users to easily obtain media content in various formats directly from YouTube links.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>The City of Dead 3D Game (AI in Metaverse)</h3>
+                <p>Developed the City of Dead 3D game using the Unity game engine and C# scripting language. This is a zombie survival game where the player kills zombies attacking them and must find the antidote to save the lives of people in the city.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Guntha Measures Website</h3>
+                <p>Developed the Guntha Measures website using HTML and CSS for the frontend and Python Django for the backend. This website measures land, farms, and plots in gunthas by inputting the length and breadth in feet.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shubham Kankrale. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Shubham Kankrale</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00d4ff;
+        }
+
+        .logo span {
+            font-size: 1rem;
+            color: white;
+            display: block;
+            font-weight: 400;
+        }
+
+        .AI {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .AI img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .AI p {
+            font-size: 1rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #e0e0e0;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: #00d4ff;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 50px 20px;
+        }
+
+        .skills-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .skills-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Skill Box */
+        .skill-box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.2);
+        }
+
+        .skill-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .skill-box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .skill-box p {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1F1F1F;
+            color: #757575;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: rgba(30, 30, 30, 0.95);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: 0.3s;
+            }
+
+            nav ul.active {
+                right: 0;
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo span {
+                font-size: 0.8rem;
+            }
+
+            .AI img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .skills-container {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .skill-box {
+                padding: 15px;
+            }
+
+            .skill-box img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .skills-section h2 {
+                font-size: 24px;
+            }
+
+            .skills-section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            Shubham Kankrale
+            <span>Full Stack Developer & AI Engineer</span>
+        </div>
+        <div class="AI">
+            <a href="/samai"><img src="/static/assets/AI2.jpg" alt="SamAI"></a>
+            <a href="/samai" id="n">SamAI</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="skills-section">
+        <h2>Skills</h2>
+        <p>The skills shown here are just the tip of the iceberg. There's a whole lot more beneath the surface!</p>
+        
+        <div class="skills-container">
+            <div class="skill-box">
+                <img src="/static/assets/python.png" alt="Python">
+                <p>Python</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/django.png" alt="Django">
+                <p>Django</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/flask.png" alt="Flask">
+                <p>Flask</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/html.png" alt="HTML">
+                <p>HTML</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/css.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/sql.png" alt="SQL">
+                <p>SQL</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/git.png" alt="Git">
+                <p>Git</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/rest.png" alt="REST API">
+                <p>REST API</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/genai.png" alt="Generative AI">
+                <p>Generative AI</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/ml.png" alt="Machine Learning">
+                <p>Machine Learning</p>
+            </div>
+
+            <div class="skill-box">
+                <img src="/static/assets/Unity_3D.webp" alt="Unity 3D">
+                <p>Unity 3D</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shubham Kankrale. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Shubham Kankrale</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #00d4ff;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00d4ff;
+        }
+
+        .logo span {
+            font-size: 1rem;
+            color: white;
+            display: block;
+            font-weight: 400;
+        }
+
+        .AI {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .AI img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .AI p {
+            font-size: 1rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #00d4ff;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            margin: 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        ul li a:hover {
+            background-color: #00d4ff;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 50px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .about-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .about-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid #00d4ff;
+            box-shadow: 0px 10px 20px rgba(0, 212, 255, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-content {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .about-content h3 {
+            font-size: 22px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .about-content p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1F1F1F;
+            color: #757575;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding-bottom: 0;
+            }
+
+            ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 5px;
+                padding: 20px 0;
+                background-color: #1e1e1e;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1000;
+            }
+
+            ul.active {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            ul li {
+                margin: 5px 0;
+                width: 100%;
+            }
+
+            ul li a {
+                display: block;
+                padding: 10px;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content {
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .about-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .AI {
+                margin: 10px 0;
+            }
+
+            .AI img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+            }
+
+            .about-section h2 {
+                font-size: 28px;
+            }
+
+            .about-content h3 {
+                font-size: 20px;
+            }
+
+            .about-section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            Shubham Kankrale
+            <span>Full Stack Developer & AI Engineer</span>
+        </div>
+        <div class="AI">
+            <a href="/samai" id="n"><img src="/static/assets/AI2.jpg" alt="SamAI"></a>
+            <a href="/samai"><p>SamAI</p></a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <h2>About Me</h2>
+        <p>Passionate Full Stack Developer & AI Engineer with experience in building scalable web applications, AI-driven solutions, and engaging 3D experiences.</p>
+
+        <div class="about-container">
+            <div class="about-image">
+                <img src="/static/assets/sam.jpeg" alt="Shubham Kankrale">
+            </div>
+            <div class="about-content">
+                <h3>Who Am I?</h3>
+                <p>
+                    I'm a passionate <strong>AI Engineer</strong> and <strong>Full Stack Developer</strong> who thrives on building <strong>AI-driven applications, scalable web solutions, and immersive technologies</strong>.
+                </p>
+                <p>
+                    From developing <strong>AI Agents, hospital management systems with AI integration to 3D gaming experiences using Unity</strong>, my goal is to create meaningful and scalable tech solutions.
+                </p>
+                <p>
+                    I specialize in <strong>Python, Generative AI, Machine Learning, Web Development, and Unity 3D</strong>. I'm always looking for new challenges and innovative projects!
+                </p>
+                <p>To Know more about me asking to <a href="/samai">SamAI</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shubham Kankrale. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

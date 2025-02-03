@@ -1,0 +1,77 @@
+Name: Shubham Kankrale
+
+Mobile : +91-7517647979
+Email: samkankrale@gmail.com
+Address: At-post Ravande, Tel-Kopargaon, Dist- Ahmednagar, State- Maharashtra, Country- India
+Marietal status : Single (Waiting for Pretty women)
+GitHub: github.com/shubhamkankrale
+LinkedIn: linkedin.com/in/shubhamkankrale
+
+Introduction: Hello! I am Shubham Kankrale, Full Stack Developer & AI Engineer passionate about artificial intelligence, machine learning, 
+and full-stack development. With a strong background in Python, Flask, and Django, I have developed various AI-driven applications 
+and web projects. My expertise includes NLP, Generative AI, and chatbot development, and I constantly strive to innovate and build 
+impactful solutions. I had completed my Bachelor's degree in Artificial Intelligence & Data Science and hands-on experience working with AI-powered applications,
+cloud technologies, and API integrations. My goal is to leverage AI to create intelligent and efficient systems that enhance user 
+experiences and solve real-world problems.
+
+Education: Degree - Bachelor's Of Engineering
+           Field - Artificial Intelligence And Data Science
+           Year - 2021 to 2024
+           University - Savitribai Phule Pune University, Pune 
+
+Skills & Expertise: Technical Skills - Python, Django, Flask, SQL, HTML, CSS, Generative AI, Machine Learning, Tableu, Unity 3D
+                    Other Skills - Communication, Leadership, Time Management, Presentation
+
+Experience & Internships:1. Company name: Webfries IT solutions Pvt. Ltd.(Duration June 2023 to June 2024)
+                            Designation : Full Stack Developer(Intern)
+                            Projects: 1. Voice Agent (AI bot with Database storage and semantic Searches).
+                                         tech using the Python,flask,sql,OpenAI api,whisper model,cohere api for semantic Searches
+                                      2. RemoAI (Debt Settlement And Regularization Bot)
+                                         telegram bot & whatsapp integrations in that bot
+                                    
+                        
+                         2. Company name: ESDS,nashik(Duration Feb 2023 to April 2023)
+                            Designation : Web Developer(Intern)
+                            Projects: 1. Contributed to AI-driven web applications.
+                                            Text Analysis Website
+                                            Guess Number Game Website
+
+
+Personal Projects: 1.HospitalAI Connect(Using RAG)
+                    - A hospital management system that allows online OPD appointment booking.
+                    - Uses AI chatbot with RAG to provide hospital-related information.
+                    Tech uses : Python, flask, sql, html, css, groq api
+
+                   2.AI Voice Agent Chatbot
+                    - A multilingual voice chatbot that provides real-time responses.
+                    - Users can interact with bot by voice commands
+                    Tech uses : Python, flask, OpenAI api, html, css
+
+                   3.SamHub- A YouTube Media Downloader
+                    - A Flask-based web application for downloading YouTube videos and audio.
+                    - Used to download Media in audio or video format in various Qualities
+                    Tech uses : Python,flask, yt-dlp, html, css
+
+                   4.The City of Dead 3D Game(AI in metaverse)
+                    - A zombie survival game developed in Unity 3D using C#.
+                    - The player must find an antidote to save the city.
+                    Tech uses : Unity Game Engine, C# scripting, Mixamo Animations
+
+                   5. Guntha Measures
+                    - A web app to measure land in Gunthas based on input length and breadth.
+                    Tech uses : Python, Django, html, css
+
+Currently Working on : Luna AI 
+                      - An advanced AI system that provides users with human-like voice responses.
+                      - Allows users to interact with an AI character that offers a highly realistic and natural conversational experience.
+                      - Designed to create an immersive and engaging interaction for users.
+                      Tech uses : Llama open source model, RAG, Coqui TTS, Unity 3D, Python, Django, html, css
+
+Interests & Hobbies : - Exploring AI-driven technologies
+
+                      - Game development with Unity 3D
+
+                      - Web development & full-stack engineering
+
+                      - Blogging about AI and software development
+

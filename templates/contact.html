@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shubham Kankrale</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar (Sticky) */
+        nav {
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+            left: 0;
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00d4ff;
+        }
+
+        .logo span {
+            font-size: 1rem;
+            color: white;
+            display: block;
+            font-weight: 400;
+        }
+
+        .AI {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .AI img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .AI p {
+            font-size: 1rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #00d4ff;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-menu li a:hover {
+            background-color: #00d4ff;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Rest of your existing styles */
+        .contact-section {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .coming-soon {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff5252;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in-out infinite alternate;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #00d4ff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #1db954;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1F1F1F;
+            color: #757575;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 968px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .logo span {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+                z-index: 100;
+            }
+
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                background-color: #1e1e1e;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 20px 0;
+                border-bottom: 2px solid #00d4ff;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .nav-menu li a {
+                display: block;
+                padding: 10px 20px;
+            }
+
+            .contact-info {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .logo span {
+                font-size: 0.8rem;
+            }
+
+            .AI img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            Shubham Kankrale
+            <span>Full Stack Developer & AI Engineer</span>
+        </div>
+
+        <div class="AI">
+            <a href="/samai"><img src="/static/assets/AI2.jpg" alt="SamAI"></a>
+            <a href="/samai" id="n">SamAI</a>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rest of your existing content -->
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out through any of the platforms below.</p>
+
+        <div class="coming-soon">🚀 Contact Page Coming Soon... 🚀</div>
+
+        <div class="contact-info">
+            <p>📞 Mobile: +91 75176 47979</p>
+            <p>📧 Email: samkankrale@gmail.com</p>
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shubham-kankrale-659b23264/" target="_blank">linkedin.com/in/shubham-kankrale</a></p>
+            <p>📷 Instagram: <a href="https://www.instagram.com/sam_kankrale/" target="_blank">@sam_kankrale</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shubham Kankrale. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Animate hamburger to X
+            const spans = hamburger.querySelectorAll('span');
+            spans.forEach(span => span.classList.toggle('active'));
+        });
+    </script>
+</body>
+</html>
