@@ -17,7 +17,8 @@ experiences and solve real-world problems.
 Education: Degree - Bachelor's Of Engineering
            Field - Artificial Intelligence And Data Science
            Year - 2021 to 2024
-           University - Savitribai Phule Pune University, Pune 
+           University - Savitribai Phule Pune University, Pune
+           SGPA - 8.0/10
 
 Skills & Expertise: Technical Skills - Python, Django, Flask, SQL, HTML, CSS, Generative AI, Machine Learning, Tableu, Unity 3D
                     Other Skills - Communication, Leadership, Time Management, Presentation
